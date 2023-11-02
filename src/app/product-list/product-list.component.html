@@ -1,0 +1,19 @@
+<section class="text-center" style="background-image: url('https://wp.thecollector.com/wp-content/uploads/2020/07/art-institute-of-chicago.jpg'); background-position: center; background-size: cover; height: 60vh;">
+  <div class="container" style="display: flex; justify-content: center; align-items: center; max-width: 80%;">
+    <div style="background-color: rgba(23, 21, 21, 0.6); padding: 20px;">
+      <h1 style="color: white;">Welcome</h1>
+      <p class="lead" style="color: white;">Explore thousands of artworks in the museum’s collection—from our renowned icons to lesser-known works from every corner of the globe—as well as our books, writings, reference materials, and other resources.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let artwork of artworks" class="col-lg-3 col-sm-6 mb-4">
+      <app-card [artwork]="artwork"></app-card>
+    </div>
+  </div>
+  <mat-paginator class="d-flex justify-content-center" [length]="totalItems" [pageSize]="pageSize"
+    [pageSizeOptions]="[12, 24, 56, 112]" (page)="onPageChanged($event)" showFirstLastButtons>
+  </mat-paginator>
+</div>

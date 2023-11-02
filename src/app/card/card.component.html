@@ -1,0 +1,16 @@
+<div class="card h-100">
+  <div class="card-img-top position-relative" style="height: 200px;">
+      <img src="https://www.artic.edu/iiif/2/{{artwork.image_id}}/full/843,/0/default.jpg" alt="{{artwork?.thumbnail?.alt_text || artwork.title}}" 
+      width="100%" class="img-fluid card-img" style="height: 200px;">
+        <span class="position-absolute" style="top: 10px; right: 10px; cursor: pointer;">
+          <i class="fa fa-2x"
+          [ngClass]="{'fa-duotone fa-heart': isFavorite || inWishlist(artwork), 'fa-heart-o': !isFavorite && !inWishlist(artwork), 'text-danger': isFavorite || inWishlist(artwork)}"
+          (click)="toggleFavorite(artwork)">
+         </i>
+        </span>
+  </div>
+  <div class="card-body d-flex flex-column">
+      <h3 class="card-title flex-grow-1 text-center">{{artwork.title}}</h3>
+      <a  [routerLink]="['/productInfo', artwork.id]" class="btn btn-primary align-self-end mt-auto w-100">View More</a>
+  </div>
+</div>

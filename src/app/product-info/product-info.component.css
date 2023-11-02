@@ -1,0 +1,13 @@
+  .btn {
+    color: #009999;
+    background: none;
+    border: 1px solid #009999;
+    border-radius: 20px;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    color: #fff;
+    background: #009999;
+    box-shadow: none;
+  }

@@ -1,0 +1,36 @@
+<div class="container py-5">
+  <div class="row justify-content-center mb-3" *ngIf="wishlist.length > 0; else noItems">
+    <div class="col-md-12 col-xl-10" *ngFor="let item of wishlist">
+      <div class="card shadow-0 border rounded-3 mb-2">
+        <div class="card-body">
+          <div class="row align-items-center">
+            <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+              <div class="bg-image hover-zoom ripple rounded ripple-surface" style="height:13em;">
+                <img src="https://www.artic.edu/iiif/2/{{item.image_id}}/full/843,/0/default.jpg" 
+                     alt="{{ item.title }}" class="itemImage w-100 h-100" />
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-xl-6">
+              <h2>{{item.title}}</h2>
+              <div class="mt-1 mb-0 text-muted small">
+                <p>Artist Name: {{ item?.artist_title || "..." }}</p>
+                <p>Art Style: {{item?.style_title || "..."}}</p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+              <div class="d-flex flex-column h-100 justify-content-center mt-4">
+                <a class="viewButton btn btn-sm p-2" [routerLink]="['/productInfo', item.id]">View More</a>
+                <button class="removeButton btn btn-sm mt-2 p-2" type="button" (click)="removeFromWishlist(item)">
+                  Remove
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noItems>
+    <p class="text-center">Your wishlist is empty.</p>
+  </ng-template>
+</div>

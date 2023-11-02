@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-sm-11 mx-auto">
+        <ng-container *ngIf="currentArtworkInfo">
+            <div class="row">
+                <div class="col-sm-6  d-flex flex-column justify-content-center">
+                  <img src="https://www.artic.edu/iiif/2/{{currentArtworkInfo.image_id}}/full/843,/0/default.jpg" 
+                       alt="{{ currentArtworkInfo.title }}" 
+                       width="100%" 
+                       class="img-fluid card-img" 
+                       style="height: 40vw; border-radius: 10%;">
+                </div>
+                <div class="col-sm-6  d-flex flex-column justify-content-center">
+                  <h1><strong>Artwork Name:</strong> {{ currentArtworkInfo.title }}</h1>
+                  <p *ngIf="currentArtworkInfo.artist_title"><strong>Artist Name:</strong> {{ currentArtworkInfo.artist_title }}</p>
+                  <p *ngIf="currentArtworkInfo.style_title"><strong>Art Style:</strong> {{currentArtworkInfo.style_title}}</p>
+                  <p *ngIf="currentArtworkInfo.date_display"><strong>Date:</strong> {{currentArtworkInfo.date_display}}</p>
+                  <h3 *ngIf="currentArtworkInfo.description"><strong>Description:</strong></h3>
+                  <p>{{ currentArtworkInfo.description }}</p>
+                  <a class="btn" (click)="addToWishlist(currentArtworkInfo)">Add to Wishlist</a>
+                </div>
+              </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>

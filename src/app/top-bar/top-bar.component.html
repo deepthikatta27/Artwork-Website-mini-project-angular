@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light p-3" style="background: #009999;">
+  <div class="container-fluid">
+
+    <a class="navbar-brand text-white ms-md-auto" href="#">Art Institute of Chicago</a>
+
+    <!-- Searchbar in middle -->
+    <form class="mx-auto flex-grow-1 me-2" (submit)="onSubmit()">
+      <div class="input-group">
+        <input class="form-control mx-auto" type="search" placeholder="Search"
+         name="searchedValue" [(ngModel)]="searchedValue" aria-label="Search">
+        <button class="btn btn-outline-secondary bg-white" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+    </form>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/wishlist">Wishlist <i class="fa fa-heart"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/documentation">Documentation</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>

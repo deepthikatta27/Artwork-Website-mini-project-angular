@@ -1,0 +1,58 @@
+<div class="container mt-4 mb-4">
+    <h1>Getting Started with Artwork Explorer in Angular</h1>
+    <div >
+        <p>Artwork Explorer is an Angular application that allows users to browse, add,
+        and remove artwork items from a wishlist. This documentation page will explain
+         how to use the application.</p>
+    </div>
+    <div>
+        <h3>Installing Artwork Explorer Source Code</h3>
+        <p>To install the Artwork application source code, follow below mentioned steps:</p>
+        <ol>
+            <li>Clone the repository from GitHub</li>
+            <li>In a terminal window, navigate to the root directory of the Artwork application:<a>cd artwork</a></li>
+            <li>Run the command <code>npm install</code> to install the required dependencies.</li>
+            <li>Run the command <code>ng serve</code> to start the development server. The application will launch on the localhost.</li>
+        </ol>
+    </div>
+    <div>
+        <h3>Prerequisites</h3>
+        <p>To deploy the Artwork application locally on your machine, you'll need the following:</p>
+        <ul>
+            <li>Node.js (version 8 or higher)</li>
+            <li>Angular CLI (version 10 or higher)</li>
+            <li>An internet connection</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Using Artwork Explorer</h3>
+        <p>The Artwork application has three main features: browsing artwork items, 
+            adding items to the wishlist,
+             and removing items from the wishlist.</p>
+        <br>
+        <h4>Browsing Artwork Items</h4>
+        <p>To browse artwork items, simply browse the home page where all available artworks are displayed.
+            To filter the artwork list based on item name and its details, use the search bar in the navigation bar.</p>
+        <br>
+        <h4>Adding Items to the Wishlist</h4>
+        <p>To add an artwork item to the wishlist, simply click the "heart" icon on top-right of item image you want to add.
+             The item will be added to the wishlist, which you can view on the "Wishlist" page of the
+             application and a alert will be displayed indicating that the item is added in the wishlist.</p>
+        <br>
+        <h4>Removing Items from the Wishlist</h4>
+        <p>To remove an artwork item from the wishlist, simply click on the "heart" icon on the image again or navigate to the "Wishlist"
+             section of the application and click the "Remove" button
+            next to the item you want to remove. The item will be removed from the wishlist, alert message will be displayed and
+            will no longer be visible on the page.</p>
+    </div>
+    <div>
+        <h3>Page Details:</h3>
+        <ol>
+            <li><b><a class="text-dark" routerLink="/">Home :</a></b> This section displays a welcome message and a list of all the artworks available in the museum's collection. Each artwork displayed has a "heart" icon to add the artwork to the wishlist and a "View More" button to display that particular artwork's details.</li>
+            <li><b><a  class="text-dark" routerLink="/about">About :</a> </b> This section provides a brief introduction to the Art Institute of Chicago.</li>
+            <li><b><a  class="text-dark" routerLink="/documentation">Documentation :</a></b> This section explains how to use the application, including how to browse, search, and save artworks to the wishlist.</li>
+            <li><b><a  class="text-dark" routerLink="/wishlist">WishList :</a></b> This section displays a list of all the favourite artworks added to the user's wishlist. Here, each artwork has a "View More" button to navigate to its details view, and a "Remove" button to delete an artwork from the wishlist.</li>
+        </ol>
+    </div>
+   
+</div>
